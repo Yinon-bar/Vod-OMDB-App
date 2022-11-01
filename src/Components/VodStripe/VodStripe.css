@@ -1,0 +1,16 @@
+.VodStripe {
+  min-height: 350px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+
+  align-items: center;
+}
+
+.VodStripe h2 {
+  color: #fff;
+  text-align: center;
+}
