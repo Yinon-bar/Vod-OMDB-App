@@ -1,8 +1,12 @@
+import "./Footer.css";
+
 function Footer() {
   return (
-    <div className="Footer">
-      <h3>Footer</h3>
-      {/*  */}
+    <div className="Footer container-fluid bg-dark p-2">
+      <div className="container">
+        <h3>&copy; Footer &copy;</h3>
+        {/*  */}
+      </div>
     </div>
   );
 }
