@@ -3,13 +3,17 @@ import VodInput from "../VodInput/VodInput";
 import VodList from "../VodList/VodList";
 import VodStripe from "../VodStripe/VodStripe";
 import { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 function Home() {
+  const [queries] = useSearchParams();
+
   const [arr, setArr] = useState([]);
 
   useEffect(() => {
-    doApi("titanic");
-  }, []);
+    let searchQ = queries.get("s") || "superman";
+    doApi(searchQ);
+  }, [queries]);
   const doApi = async (URL) => {
     let myUrl = `https://www.omdbapi.com/?s=${URL}&apikey=98a1ad13`;
     let resp = await fetch(myUrl);
