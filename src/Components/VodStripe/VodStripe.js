@@ -1,11 +1,11 @@
 import "./VodStripe.css";
-import cinema from "../../Assets/img/cinema.jpg";
+import popcorn from "../../Assets/img/popcorn.jpg";
 
 function VodStripe() {
   return (
     <div
       className="VodStripe container-fluid"
-      style={{ backgroundImage: `url( ${cinema})` }}
+      style={{ backgroundImage: `url( ${popcorn})` }}
     >
       <div className="container">
         <h2 className="display-4">VOD - Omdb</h2>

@@ -1,19 +1,15 @@
 import VodItem from "../VodItem/VodItem";
 import "./VodList.css";
 
-function VodList() {
+function VodList(props) {
   return (
     <div className="VodList container-fluid py-4">
       <div className="container">
         <h2>List of Movies</h2>
         <div className="row">
-          <VodItem />
-          <VodItem />
-          <VodItem />
-          <VodItem />
-          <VodItem />
-          <VodItem />
-          <VodItem />
+          {props.vod_ar.map((item) => (
+            <VodItem key={item.imdbID} item={item} />
+          ))}
         </div>
       </div>
     </div>

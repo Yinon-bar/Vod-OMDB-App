@@ -1,12 +1,14 @@
 import "./VodItem.css";
 
-function VodItem() {
+function VodItem(props) {
   return (
-    <div className="col-md-3 border p-2">
-      <img src="" className="float-start me-2 w-25" alt="" />
-      <h3>Rambo 5</h3>
-      <div>Year: 2022</div>
-      <button className="btn btn-dark">More info</button>
+    <div className="col-md-4 p-2 ">
+      <div className="border p-2 h-100 overflow-hidden shadow rounded rounded-2">
+        <img src={props.item.Poster} className="float-start me-2 w-25" alt="" />
+        <h3>{props.item.Title}</h3>
+        <div>Year: {props.item.Year}</div>
+        <button className="btn btn-dark">More info</button>
+      </div>
     </div>
   );
 }
